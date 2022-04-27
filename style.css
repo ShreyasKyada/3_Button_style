@@ -1,0 +1,71 @@
+/* Rubik font */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #232526;
+  font-family: "Rubik";
+}
+body,
+div,
+a,
+a::after,
+a::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div {
+  height: 100px;
+  width: 300px;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  padding: 5px;
+}
+a {
+  text-decoration: none;
+  color: transparent;
+  height: 100%;
+  width: 100%;
+  font-size: 40px;
+  letter-spacing: 1px;
+  position: relative;
+  background: #232526;
+  padding: 20px 30px;
+}
+a::after,
+a::before {
+  content: "Hover Me";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: #2c2d2d;
+  transition: all 1s ease-out;
+}
+a::after {
+  transform: scale(0);
+  left: 100%;
+}
+a::before {
+  left: 0;
+  opacity: 1;
+  left: 0;
+}
+a:hover::after {
+  transform: scale(1) rotateY(360deg);
+  opacity: 1;
+  left: 0;
+}
+a:hover::before {
+  transform: scale(0) rotateY(360deg);
+  opacity: 0;
+  left: -100%;
+}
